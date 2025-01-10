@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a1a1a;
+  --secondary: #42d1ce;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-50;
+}
+
+.hero-gradient {
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.nav-link {
+  @apply text-white hover:text-secondary transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-secondary text-white font-medium px-6 py-3 rounded-full 
+         hover:bg-opacity-90 transition-all duration-200;
+}
+
+.empty-state {
+  @apply flex flex-col items-center justify-center p-8 text-center;
+}
+
+.empty-state-icon {
+  @apply w-24 h-24 mb-4 text-gray-300;
+}
+
+.empty-state-text {
+  @apply text-lg text-gray-600 mb-4;
+}
+
+.empty-state-button {
+  @apply bg-black text-white px-6 py-3 rounded-full font-medium
+         hover:bg-opacity-80 transition-all duration-200;
+}
+
+input,
+textarea,
+select {
+  @apply border border-gray-200 rounded-md;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-secondary outline-none ring-2 ring-secondary;
+}
