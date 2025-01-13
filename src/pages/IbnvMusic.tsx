@@ -51,8 +51,8 @@ export function IbnvMusic() {
   }
 
   return (
-    <div className="min-h-screen bg-white p-12">
-      <div className="w-full mx-auto py-16 px-4 sm:py-24">
+    <div className="min-h-screen bg-transparent">
+      <div className="w-full mx-auto py-16 px-4 sm:py-24 sm:px-24">
         <div className="text-center mb-16">
           <h1 className="text-7xl font-extrabold text-gray-900 sm:tracking-tight">
             IBNV Music

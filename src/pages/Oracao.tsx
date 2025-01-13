@@ -58,7 +58,7 @@ export function Oracao() {
 
   return (
     <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
             Entre em contato

@@ -21,14 +21,14 @@ export function LiveSection({ title, description, isLiveStreaming, liveVideoId, 
 
   return (
     <motion.section
-      className="py-16 px-16 bg-gray-50"
+      className="py-16 sm:px-16 bg-gray-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="w-full mx-auto px-4">
         <motion.h2
-          className="text-7xl font-bold text-center mb-4"
+          className="text-5xl sm:text-7xl font-bold text-center mb-4"
           initial={{ y: -20 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.2 }}
@@ -36,7 +36,7 @@ export function LiveSection({ title, description, isLiveStreaming, liveVideoId, 
           {title}
         </motion.h2>
         <motion.p
-          className="text-gray-600 text-3xl text-center mb-8 max-w-2xl mx-auto"
+          className="text-gray-600 text-xl sm:text-3xl text-center mb-8 max-w-2xl mx-auto"
           initial={{ y: -20 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.3 }}

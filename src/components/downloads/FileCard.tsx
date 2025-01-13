@@ -38,45 +38,40 @@ export function FileCard({
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+      className="bg-white rounded-lg shadow hover:shadow-md transition-all duration-200"
     >
       <div 
-        className="p-6 cursor-pointer"
+        className="p-1.5 sm:p-4 cursor-pointer flex items-center justify-between gap-1.5"
         onClick={handleFileClick}
       >
-        <div className="flex items-start space-x-4">
-          <div className={`p-3 rounded-lg ${isFolder ? 'bg-secondary/10' : 'bg-gray-100'}`}>
+        <div className="flex items-center gap-1.5 sm:gap-4 flex-1 min-w-0">
+          <div className={`p-1 sm:p-3 rounded-lg ${isFolder ? 'bg-secondary/10' : 'bg-gray-100'}`}>
             {isFolder ? (
-              <Folder className="w-8 h-8 text-secondary" />
+              <Folder className="w-3.5 h-3.5 sm:w-6 sm:h-6 text-secondary" />
             ) : (
-              <FileText className="w-8 h-8 text-gray-600" />
+              <FileText className="w-3.5 h-3.5 sm:w-6 sm:h-6 text-gray-600" />
             )}
           </div>
-
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-medium text-gray-900 truncate">
-              {name}
-            </h3>
+            <h3 className="text-xs sm:text-base font-semibold text-gray-900 truncate">{name}</h3>
             {!isFolder && size && (
-              <p className="text-sm text-gray-500 mt-1">
-                {formatFileSize(size)}
-              </p>
+              <p className="text-[10px] sm:text-sm text-gray-500 mt-0.5 sm:mt-1">{formatFileSize(size)}</p>
             )}
           </div>
-
-          {!isFolder && (
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onDownload(path, name);
-              }}
-              className="p-2 text-gray-500 hover:text-secondary transition-colors"
-              title="Download"
-            >
-              <Download className="w-5 h-5" />
-            </button>
-          )}
         </div>
+        {!isFolder && (
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            onClick={(e) => {
+              e.stopPropagation();
+              onDownload(path, name);
+            }}
+            className="p-1 sm:p-2 text-gray-500 hover:text-secondary bg-gray-100 rounded-full flex-shrink-0"
+            title="Download"
+          >
+            <Download className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
+          </motion.button>
+        )}
       </div>
     </motion.div>
   );

@@ -68,7 +68,7 @@ export function EventsSection({ events, loading = false }: EventsSectionProps) {
 
   return (
     <motion.section 
-      className="py-16 px-16 w-full"
+      className="py-16 sm:px-16 w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -76,7 +76,7 @@ export function EventsSection({ events, loading = false }: EventsSectionProps) {
     >
       <div className="w-full">
         <motion.h2 
-          className="text-7xl font-bold text-center mb-12"
+          className="text-5xl sm:text-7xl font-bold text-center mb-12"
           variants={itemVariants}
         >
           {eventsHome.title}
@@ -103,7 +103,7 @@ export function EventsSection({ events, loading = false }: EventsSectionProps) {
                 <p className="text-gray-600 mb-3 text-xl">
                   {formatDate(event.event_date)} às {event.event_time}
                 </p>
-                <p className="text-gray-600 text-xl">{event.description}</p>
+                <p className="text-gray-600 text-lg sm:text-xl">{event.description}</p>
               </div>
             </motion.div>
           ))}

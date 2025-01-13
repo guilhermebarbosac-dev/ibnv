@@ -38,7 +38,7 @@ export function InfoSection({
 
   return (
     <motion.section 
-      className={`${reverse ? 'bg-gray-50' : 'bg-primary text-white'} py-16 sm:py-24 px-24 w-full`}
+      className={`${reverse ? 'bg-gray-50' : 'bg-primary text-white'} py-16 sm:py-24 px-4 sm:px-24 w-full`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -48,7 +48,7 @@ export function InfoSection({
         <div className={`grid ${hasImage ? 'md:grid-cols-2' : 'grid-cols-1'} gap-12 md:gap-16 items-center ${reverse ? 'md:grid-flow-col' : ''}`}>
           <div className={`flex items-center justify-center ${hasImage && reverse ? 'md:col-start-2 md:col-end-3' : ''} ${!hasImage ? 'col-span-full' : ''}`}>
             <div className="text-center w-full space-y-8">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">{title}</h2>
+              <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight">{title}</h2>
               <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed">{description}</p>
               {buttons && buttons.length > 0 && (
                 <div className="pt-4 flex flex-wrap gap-4 justify-center">

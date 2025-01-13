@@ -131,9 +131,9 @@ export function Downloads() {
   const totalPages = Math.ceil(filteredFiles.length / itemsPerPage);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4 sm:px-16">
       <motion.div 
-        className="max-w-5xl mx-auto"
+        className="w-full mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -143,8 +143,8 @@ export function Downloads() {
         ) : error ? (
           <div className="text-center py-12 text-red-600">{error}</div>
         ) : files.length === 0 ? (
-          <div className="py-16 px-4 h-screen flex items-center justify-center">
-            <div className="container mx-auto">
+          <div className="py-16 px-4 sm:px-16 h-screen flex items-center justify-center">
+            <div className="mx-auto">
               <EmptyState
                 icon={FileText}
                 title="Nenhum arquivo encontrado"

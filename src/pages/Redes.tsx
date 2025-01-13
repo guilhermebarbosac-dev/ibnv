@@ -64,7 +64,7 @@ export function Redes() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4 sm:px-24">
       <motion.div 
         className="mx-auto"
         variants={containerVariants}

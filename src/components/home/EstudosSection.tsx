@@ -65,33 +65,33 @@ export function EstudosSection({ estudos, loading = false }: EstudosSectionProps
   }
 
   return (
-    <section className="py-16 px-16 bg-gray-50">
+    <section className="px-4 sm:px-24 bg-transparent">
       <motion.div
-        className="max-w-7xl mx-auto"
+        className="w-full mx-auto"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="text-center mb-12">
-          <h2 className="text-7xl font-bold text-gray-900 mb-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-7xl">
             Estudos de Células
-          </h2>
-          <p className="text-2xl text-gray-600">
+          </h1>
+          <p className="mt-5 max-w-xl mx-auto text-xl sm:text-2xl text-gray-500 pb-16">
             Aprofunde seu conhecimento com nossos estudos semanais
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative group p-4 bg-transparent">
           <button
             onClick={() => handleScroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full text-gray-600 hover:text-gray-900 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 p-2 bg-white/90 shadow-lg rounded-full text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-auto gap-8 pb-4 scrollbar-hide scroll-smooth"
+            className="flex overflow-x-auto gap-8 pb-4 px-12 scrollbar-hide scroll-smooth"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {estudos.map((estudo) => (
@@ -136,10 +136,13 @@ export function EstudosSection({ estudos, loading = false }: EstudosSectionProps
 
           <button
             onClick={() => handleScroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full text-gray-600 hover:text-gray-900 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 p-2 bg-white/90 shadow-lg rounded-full text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
+          
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none" />
         </div>
       </motion.div>
     </section>
