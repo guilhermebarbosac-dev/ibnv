@@ -68,7 +68,7 @@ export function EventsSection({ events, loading = false }: EventsSectionProps) {
 
   return (
     <motion.section 
-      className="py-16 px-4 w-full"
+      className="py-16 px-16 w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}

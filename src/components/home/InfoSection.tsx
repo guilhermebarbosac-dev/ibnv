@@ -38,7 +38,7 @@ export function InfoSection({
 
   return (
     <motion.section 
-      className={`${reverse ? 'bg-gray-50' : 'bg-primary text-white'} py-16 sm:py-24 px-4 w-full`}
+      className={`${reverse ? 'bg-gray-50' : 'bg-primary text-white'} py-16 sm:py-24 px-24 w-full`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

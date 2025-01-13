@@ -10,7 +10,7 @@ export function AdminLogin() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const { showToast } = useToastContext();
+  const { addToast } = useToastContext();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,10 +25,10 @@ export function AdminLogin() {
       if (error) throw error;
 
       navigate('/admin/dashboard');
-      showToast('Login realizado com sucesso!', 'success');
+      addToast('Login realizado com sucesso!', 'success');
     } catch (error) {
       console.error('Error logging in:', error);
-      showToast('Erro ao fazer login. Verifique suas credenciais.', 'error');
+      addToast('Erro ao fazer login. Verifique suas credenciais.', 'error');
     } finally {
       setLoading(false);
     }
@@ -134,36 +134,6 @@ export function AdminLogin() {
                   'Entrar'
                 )}
               </button>
-            </div>
-
-            {/* Footer Links */}
-            <div className="mt-8">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-200" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">
-                    Precisa de ajuda?
-                  </span>
-                </div>
-              </div>
-
-              <div className="mt-6 flex justify-center gap-6">
-                <button
-                  type="button"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Esqueci minha senha
-                </button>
-                <span className="text-gray-300">•</span>
-                <button
-                  type="button"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Suporte
-                </button>
-              </div>
             </div>
           </form>
         </div>

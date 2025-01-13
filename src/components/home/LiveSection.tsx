@@ -21,7 +21,7 @@ export function LiveSection({ title, description, isLiveStreaming, liveVideoId, 
 
   return (
     <motion.section
-      className="py-16 bg-gray-50"
+      className="py-16 px-16 bg-gray-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
