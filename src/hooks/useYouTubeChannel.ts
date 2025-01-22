@@ -17,8 +17,8 @@ export function useYouTubeChannel() {
     recentVideos: []
   });
 
-  const channelId = 'UCgGPgRVu7vaqdnjZVEioNKQ';
-  const apiKey = 'AIzaSyDHrHC41U6xGYT3Ag-VYWi5tcV2HB6p2Ro';
+  const channelId = process.env.VITE_YOUTUBE_CHANNEL_ID;
+  const apiKey = process.env.VITE_GOOGLE_API_KEY;
 
   useEffect(() => {
     async function fetchData() {
@@ -38,7 +38,7 @@ export function useYouTubeChannel() {
         }
 
         // 2. Buscar vídeos recentes (últimos 4, por exemplo)
-        const playlistId = 'UU' + channelId.substring(2);
+        const playlistId = 'UU' + channelId?.substring(2);
         const recentRes = await fetch(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=${playlistId}&key=${apiKey}`
         );
