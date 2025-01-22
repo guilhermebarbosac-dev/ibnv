@@ -49,7 +49,7 @@ export function AdminDashboard() {
     <div className="min-h-screen bg-[#f8f9fa]">
       <AdminHeader />
       
-      <div className="w-full mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto py-8 px-4 sm:px-6 lg:px-24">
         {/* Breadcrumb */}
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center space-x-2 text-sm">
